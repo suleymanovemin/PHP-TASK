@@ -73,7 +73,7 @@ header("Location:index.php");
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("submitBtn").addEventListener("click", function(event) {
-        event.preventDefault(); // Formun sunucuya gönderilmesini engelle
+        event.preventDefault(); 
 
         let name = document.querySelector("input[name='name']").value;
         let surname = document.querySelector("input[name='surname']").value;
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                alert("Veri başarıyla eklendi");
+                alert("Əlavə olundu");
             }
         };
         let data = "name=" + name + "&surname=" + surname + "&salary=" + salary + "&position=" + position + "&date=" + date;
